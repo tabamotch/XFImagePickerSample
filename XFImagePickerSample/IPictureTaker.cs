@@ -1,7 +1,11 @@
-﻿using System;
+﻿using System.IO;
+using System.Threading.Tasks;
+
 namespace XFImagePickerSample
 {
-    public interface IPicturePicker
-    {   
+    public interface IPictureTaker
+    {
+        Task<Stream> TakePicture();
+        void Dispose();
     }
 }
